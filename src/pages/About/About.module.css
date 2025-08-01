@@ -1,0 +1,129 @@
+.container {
+  background: url("../../assets/aboutMe_image.png") no-repeat right center;
+
+  background-size: 500px;
+  background-color: #fffcfe;
+  padding: 0rem 2rem;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-direction: column;
+
+  margin-top: 2rem;
+}
+
+.imageContainer {
+  display: block;
+}
+
+.imageContainer img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-right: 5rem;
+  width: 500px;
+  height: auto;
+}
+
+.card {
+  width: 60%;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1e3c72;
+}
+
+.card p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill {
+  background-color: #e0ecff;
+  color: #1e3c72;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  /* background-color: #cce0ff; */
+  background-color: #ffcc00;
+  transition: 0.2s ease;
+}
+
+.link {
+  color: #1c5eda;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .container {
+    background: url("../../assets/aboutMe_image.png") no-repeat right center;
+    background-size: 480px;
+    background-color: #fffcfe;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 768.98px) and (max-width: 991.98px) {
+  .container {
+    background: url("../../assets/aboutMe_image.png") no-repeat right center;
+    background-size: 600px;
+    background-color: #fffcfe;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .cardsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background: none;
+    background-image: none;
+    background-size: initial;
+    background-color: #fffcfe;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
