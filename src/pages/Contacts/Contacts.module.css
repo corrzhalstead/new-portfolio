@@ -1,0 +1,58 @@
+/* .container {
+  padding: 3rem;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  background: url("../../assets/bg_light.png") no-repeat right center,
+    linear-gradient(to right, #cdcdcd, #adc3eb);
+  background-size: cover;
+  background-color: #fffcfe;
+} */
+
+.container {
+  position: relative;
+  z-index: 0;
+  padding: 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* background: linear-gradient(to right, #cdcdcd, #adc3eb); */
+  background: linear-gradient(to bottom, #fffcfe, #fffcfe);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../assets/bg_light.png") no-repeat right center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* .container {
+  background: url("../../assets/bg_light.png") no-repeat right center;
+  background-size: cover;
+  background-color: #fffcfe;
+  padding: 0rem 2rem;
+} */
+
+.formContainer {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 2rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  gap: 1rem;
+}
+
+.formContainer input,
+.formContainer textarea {
+  width: 100%;
+  margin-bottom: 12px;
+}

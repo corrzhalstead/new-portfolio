@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 3rem;
+  display: flex;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.topContainer img {
+  width: 25px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+  gap: 3rem;
+}
+
+.contentLeft {
+  min-width: 600px;
+  flex: 1;
+  margin-right: 2rem;
+}
