@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ProjectItem.module.css";
-
 import Button from "../Button/Button";
-import Resume from "../../assets/Corazon_Halstead_Resume.pdf";
+import { useNavigate } from "react-router-dom";
+import frameSrc from "../../assets/laptop_image.png";
 
 function ProjectItem({
   source,
-  frameSrc,
   header,
   description,
-  buttonText,
-  onClick,
+
+  slug,
 }) {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
       <div className={styles.itemContainer}>
@@ -24,7 +25,11 @@ function ProjectItem({
           <div className={styles.description}>{description}</div>
 
           <div className={styles.buttonContainer}>
-            <Button text={buttonText} onClick={onClick} />
+            {/* <Button text={buttonText} onClick={onClick} /> */}
+            <Button
+              text="View Project"
+              onClick={() => navigate(`/projects/${slug}`)}
+            />
           </div>
         </div>
       </div>

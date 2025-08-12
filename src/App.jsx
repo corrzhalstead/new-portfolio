@@ -1,10 +1,30 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contacts/Contacts";
+import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
+
+// A wrapper for the one‑page layout
+function MainPage() {
+  return (
+    <main>
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+    </main>
+  );
+}
 
 function App() {
   return (
@@ -18,9 +38,9 @@ function App() {
     //   </Routes>
     // </Router>
 
-    <>
+    <Router>
       <Navbar />
-      <main>
+      {/* <main>
         <section id="home">
           <Home />
         </section>
@@ -33,8 +53,13 @@ function App() {
         <section id="contact">
           <Contact />
         </section>
-      </main>
-    </>
+      </main> */}
+
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/projects/:slug" element={<ProjectDetails />} />
+      </Routes>
+    </Router>
   );
 }
 

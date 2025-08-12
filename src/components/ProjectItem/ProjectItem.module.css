@@ -1,81 +1,83 @@
 .container {
-  /* max-width: 800px;*/
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; */
-  /* padding: 0 2rem; */
   width: 100%;
+  height: 360px;
 }
 
 .itemContainer {
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around; */
-  /* max-width: 1200px; */
-  /* max-width: 70%; */
-  width: 80%;
-  /* min-width: 800px; */
+  /* width: 80%;
+
   display: grid;
   grid-template-columns: 40% auto;
-  /* justify-content: center;
-  align-items: center; */
+
   margin: 0 auto;
-  gap: 0 4rem;
-}
-
-/* .projectImage {
-  height: 400px;
-} */
-
-.itemLeft {
-  position: relative;
-  /* min-width: 200px; */
-  /* width: 100%; */
-
-  width: 100%;
-  max-width: 600px;
+  gap: 0 4rem; */
 
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.itemLeft {
+  position: relative;
+
+  /* width: 100%;
+  max-width: 600px; */
+
+  flex: 1;
+  /* min-width: 300px; */
+  max-width: 600px;
+
+  width: 100%;
+  display: flex;
+  /* flex-direction: row;
+  align-items: center; */
   justify-content: center;
 }
 
-/* .laptopImage img {
-  width: 800px;
-  height: 800px;
-  background-color: aqua;
-} */
-
 .laptopImage {
-  /* width: 100%; */
-  /* min-width: 300px; */
-  /* width: 100%; */
-  width: 600px;
-  height: 450px;
-
-  /* width: 100%;
-  height: auto; */
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   display: block;
 }
 
 .screenImage {
   position: absolute;
-  top: 10%;
-  left: 6.5%;
-  width: 87%;
-  height: 80%;
+  top: 29%;
+  left: 22.5%;
+  /* max-width: 56%; */
+  max-width: 350px;
+  width: 55%;
+  min-height: 200px;
+  max-height: 150px;
   object-fit: contain;
   border-radius: 2px;
+  pointer-events: none;
+  background-color: black;
+}
+
+.screenImage img {
+  /* top: 30%;
+  left: 22.5%; */
+  /* width: 200px;
+  height: 200px; */
 }
 
 .itemRight {
+  flex: 1;
+  min-width: 280px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+
+  align-items: flex-start;
+  text-align: justify;
+  /* align-items: center; */
   /* width: 50%; */
 }
 
@@ -88,7 +90,7 @@
 
 .description {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .buttonContainer {
@@ -96,3 +98,73 @@
   justify-content: center;
   margin-top: 2rem;
 }
+
+@media (min-width: 992.98px) and (max-width: 1020px) {
+  .screenImage {
+    /* min-width: 42.5%;
+    width: 80%; */
+    height: auto;
+    margin-top: -0.15rem;
+    /* margin-left: -1.3rem; */
+  }
+}
+
+@media (max-width: 992px) {
+  .itemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    padding: 0 5rem;
+    /* background-color: aquamarine; */
+    /* text-align: center; */
+  }
+
+  .itemRight {
+    /* align-items: center;
+    text-align: center; */
+    /* margin-top: -5rem;
+    padding-bottom: 5rem; */
+  }
+
+  .screenImage {
+    position: absolute;
+    top: 28.8%;
+    left: 23.3%;
+    width: 320px;
+    height: 184px;
+  }
+
+  .laptopImage {
+    max-width: 500px;
+  }
+}
+
+/* @media (min-width: 1180px) and (max-width: 1240px) {
+ 
+
+  .screenImage {
+    position: absolute;
+    top: 28.5%;
+    left: 19.25%;
+    min-width: 329px;
+
+    min-height: 205px;
+  }
+} */
+
+/* @media (min-width: 992px) and (max-width: 1179.98px) {
+
+
+  .screenImage {
+    position: absolute;
+    top: 28.5%;
+    left: 21.5%;
+    min-width: 295px;
+
+    height: 184px;
+  }
+} */
