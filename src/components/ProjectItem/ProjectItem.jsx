@@ -4,13 +4,7 @@ import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 import frameSrc from "../../assets/laptop_image.png";
 
-function ProjectItem({
-  source,
-  header,
-  description,
-
-  slug,
-}) {
+function ProjectItem({ source, header, description, keyId }) {
   const navigate = useNavigate();
 
   return (
@@ -28,7 +22,7 @@ function ProjectItem({
             {/* <Button text={buttonText} onClick={onClick} /> */}
             <Button
               text="View Project"
-              onClick={() => navigate(`/projects/${slug}`)}
+              onClick={() => navigate(`/projects/${keyId}`)}
             />
           </div>
         </div>

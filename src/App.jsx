@@ -57,7 +57,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/projects/:slug" element={<ProjectDetails />} />
+        <Route path="/projects/:key" element={<ProjectDetails />} />
       </Routes>
     </Router>
   );
