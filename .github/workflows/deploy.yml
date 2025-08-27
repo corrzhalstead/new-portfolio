@@ -1,0 +1,30 @@
+name: Deploy to DreamHost via SFTP
+
+on:
+  push:
+    branches:
+      - main # Deploy only when main is updated
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Build Site
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy with SFTP
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          user: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          localDir: ./dist # or ./build if using CRA
+          remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
+          options: "--reverse --delete --verbose --exclude-glob .git*"
