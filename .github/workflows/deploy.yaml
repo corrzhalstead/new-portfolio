@@ -33,3 +33,4 @@ jobs:
           localDir: ./dist
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
           options: "--reverse --delete --verbose --exclude-glob .git*"
+          ignoreFile: .lftpignore
