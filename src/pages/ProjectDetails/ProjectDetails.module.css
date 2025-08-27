@@ -1,0 +1,98 @@
+.container {
+  width: 100%;
+  /* max-width: 1200px; */
+  padding: 2rem 5rem;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* background-color: linear-gradient(#ffff, #2e5aad); */
+  /* background-color: black; */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../assets/bg_light.png") no-repeat right center;
+  /* background: linear-gradient(to right, #cdcdcd, #293b5c); */
+
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.topContainer:hover,
+.topContainer img:hover {
+  color: #ffcc00;
+}
+
+.topContainer img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.contentLeft {
+  min-width: 600px;
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.overviewText {
+  font-size: 24px;
+  color: #1e3c72;
+  margin-bottom: 25px;
+}
+
+.projectHeader {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-bottom: 6px;
+}
+
+.projectDescription {
+  font-size: 16px;
+  color: #1e3c72;
+}
+
+.projectSubContainer {
+  margin-top: 12px;
+}
+
+.role {
+  font-style: italic;
+  font-weight: 600;
+  color: #426cb9;
+}
+
+.projectSubHeader {
+  color: #1e3c72;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.projectContributions,
+.projectTech {
+  /* margin-top: 12px; */
+  font-size: 15px;
+  color: #1e3c72;
+}
+
+/* .projectSubContainer p {
+  font-size: 15px;
+} */
