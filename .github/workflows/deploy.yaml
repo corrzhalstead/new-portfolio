@@ -32,5 +32,11 @@ jobs:
           pass: ${{ secrets.SFTP_PASS }}
           localDir: ./dist
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
-          options: "--reverse --delete --verbose --exclude-glob .git*"
+
+          reverse: true
+          delete: true
+          onlyNewer: true
+          restoreMTime: true
+          parallel: 1
+
           ignoreFile: .lftpignore
