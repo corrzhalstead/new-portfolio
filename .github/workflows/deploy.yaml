@@ -3,7 +3,7 @@ name: Deploy to DreamHost via SFTP
 on:
   push:
     branches:
-      - main
+      - [main]
 
 jobs:
   deploy:
@@ -28,9 +28,9 @@ jobs:
         uses: pressidium/lftp-mirror-action@v1
         with:
           host: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
-          user: ${{ secrets.SFTP_USERNAME }}
-          pass: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          user: ${{ secrets.SFTP_USER }}
+          pass: ${{ secrets.SFTP_PASS }}
           localDir: ./dist
           remoteDir: ${{ secrets.SFTP_TARGET_DIR }}
           options: "--reverse --delete --verbose --exclude-glob .git*"
