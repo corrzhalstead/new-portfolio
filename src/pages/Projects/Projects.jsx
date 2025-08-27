@@ -18,21 +18,16 @@ function Projects() {
         </p>
 
         <div className={styles.projectContainer}>
-          {projectData.map((project, index) => (
-            // <div key={index} className={styles.projectItem}>
-            <ProjectItem key={index} {...project} />
-            // </div>
+          {projectData.map((project) => (
+            <ProjectItem
+              keyId={project.key}
+              source={project.source}
+              header={project.header}
+              description={project.description}
+              // {...project}
+            />
           ))}
         </div>
-
-        {/* <ProjectItem
-            source={eventProjectImage}
-            frameSrc={frameSrc}
-            header="Event Management Platform"
-            description="A full-stack web app for managing multi-user events, allowing admins to create sessions, track registrations, and generate analytics dashboards. Built with React, Knex.js, and Express."
-            buttonText="Project Overview"
-            onClick={() => {}}
-          /> */}
       </section>
     </div>
   );

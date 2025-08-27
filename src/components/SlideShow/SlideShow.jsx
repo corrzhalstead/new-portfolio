@@ -56,7 +56,7 @@ function SlideShow({
       const dx = e.touches[0].clientX - startX;
       if (Math.abs(dx) > 60) {
         dx < 0 ? next() : prev();
-        startX = e.touches[0].clientX; // avoid multi-swipe
+        startX = e.touches[0].clientX;
       }
     };
     el.addEventListener("touchstart", start, { passive: true });

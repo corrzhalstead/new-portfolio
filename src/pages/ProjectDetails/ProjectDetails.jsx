@@ -1,12 +1,18 @@
 import React from "react";
 import styles from "./ProjectDetails.module.css";
 import arrowLeft from "../../assets/arrow_Left.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import ProjectShow from "../../components/ProjectShow/ProjectShow";
 import EventAdminVideo from "../../assets/Event_Admin.mp4";
+import projects from "../Projects/projectData";
 
 function ProjectDetails() {
   const navigate = useNavigate();
+  const { key } = useParams();
+  const { state } = useLocation();
+
+  const projectFromState = state?.project;
+  const project = projectFromState ?? projects.find((p) => p.key === key);
 
   return (
     <div className={styles.container}>
@@ -16,35 +22,25 @@ function ProjectDetails() {
       </div>
       <div className={styles.content}>
         <div className={styles.contentLeft}>
-          <ProjectShow
-            videoSrc={EventAdminVideo}
-            slides={[
-              {
-                src: "/shots/home.png",
-                title: "Homesite",
-                caption: "Set location & view active events",
-              },
-              {
-                src: "/shots/cart.png",
-                title: "Cart",
-                caption: "React Query + BFF workflow",
-              },
-              {
-                src: "/shots/accessibility.png",
-                title: "Accessibility",
-                caption: "ADA accommodations flow",
-              },
-            ]}
-          />
+          <ProjectShow videoSrc={project.videoSrc} slides={project.slides} />
         </div>
 
         <div>
-          <h2>Project Overview</h2>
-          <p>
-            This project showcases the use of React Query and a
-            Backend-for-Frontend (BFF) architecture to create a seamless user
-            experience.
-          </p>
+          <h2 className={styles.overviewText}>Project Overview</h2>
+          <h3 className={styles.projectHeader}>{project.header}</h3>
+          <p className={styles.projectDescription}>{project.description}</p>
+          <div className={styles.projectSubContainer}>
+            <h3 className={styles.projectSubHeader}>Role:</h3>
+            <p className={styles.role}>{project.role}</p>
+            <h3 className={styles.projectSubHeader}>Contributions:</h3>
+            <ul className={styles.projectContributions}>
+              {project.contributions.map((contribution, index) => (
+                <li key={index}>{contribution}</li>
+              ))}
+            </ul>
+            <h3 className={styles.projectSubHeader}>Stacks:</h3>
+            <p className={styles.projectTech}>{project.tech.join(", ")}</p>
+          </div>
         </div>
       </div>
     </div>
