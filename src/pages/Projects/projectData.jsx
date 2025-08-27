@@ -4,12 +4,14 @@ import eventAdminView from "../../assets/event_admin_view.png";
 import eventAdminSpeaker from "../../assets/event_admin_speaker.png";
 
 import eventAdminVideo from "../../assets/Event_Admin.mp4";
+import eventHomesiteVideo from "../../assets/Event_Homesite.mp4";
 import eventHomesiteImage from "../../assets/event_homesite.png";
 import eventHomesiteFE from "../../assets/homesite_FE.png";
 import eventHomesiteCheckout from "../../assets/homesite_checkout.png";
 import eventHomesiteCart from "../../assets/homesite_cart.png";
 import eventHomesiteSpecial from "../../assets/homesite_special.png";
 
+import settingAppVideo from "../../assets/Settings_App.mp4";
 import settingsAppImage from "../../assets/settings_app.png";
 import settingsHome from "../../assets/settings_home.png";
 import settingsAddress from "../../assets/settings_address.png";
@@ -78,7 +80,7 @@ const projects = [
     description:
       "A responsive web and mobile app for members to set a homesite and see events within a chosen radius. Users can add or purchase tickets, redeem complimentary tickets, and provide special-needs/accessibility details during checkout.",
 
-    videoSrc: eventAdminVideo,
+    videoSrc: eventHomesiteVideo,
     slides: [
       {
         src: eventHomesiteFE,
@@ -129,7 +131,7 @@ const projects = [
     header: "Settings App",
     description:
       "Web & mobile account settings hub used across applications. Members can manage addresses, billing/credit cards, homesite and radius, language, emergency contacts, membership, and personal info, with verification flows and an Account Issues panel.",
-    videoSrc: eventAdminVideo,
+    videoSrc: settingAppVideo,
     slides: [
       {
         src: settingsHome,
