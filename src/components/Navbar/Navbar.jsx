@@ -2,48 +2,12 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import profilePic from "../../assets/ProfilePic.jpg";
+import Resume from "../../assets/Corazon_Halstead_Resume_Portfolio.pdf";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
-
-  // return (
-  //   <div className={styles.container}>
-  //     <button className={styles.menuToggle} onClick={toggleMenu}>
-  //       ☰
-  //     </button>
-  //     <div className={styles.navbar}>
-  //       <ul className={`${styles.navList} ${isOpen ? styles.open : ""}`}>
-  //         <li className={styles.navItem}>
-  //           <Link to="/" onClick={() => setIsOpen(false)}>
-  //             Home
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/about" onClick={() => setIsOpen(false)}>
-  //             About
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/projects" onClick={() => setIsOpen(false)}>
-  //             Projects
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/resume" onClick={() => setIsOpen(false)}>
-  //             Resume
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/contact" onClick={() => setIsOpen(false)}>
-  //             Contact
-  //           </Link>{" "}
-  //         </li>
-  //       </ul>
-  //     </div>
-  //   </div>
-  // );
 
   return (
     <div className={styles.container}>
@@ -56,22 +20,13 @@ function Navbar() {
           </a>
         </div>
 
-        {/* Hamburger toggle for mobile */}
         <button className={styles.menuToggle} onClick={toggleMenu}>
           ☰
         </button>
 
         {/* Navigation links */}
         <ul className={`${styles.navList} ${isOpen ? styles.open : ""}`}>
-          {/* <li className={styles.navItem}>
-            <Link to="/" onClick={() => setIsOpen(false)}>
-              Home
-            </Link>
-          </li> */}
           <li className={styles.navItem}>
-            {/* <Link to="/about" onClick={() => setIsOpen(false)}>
-              About
-            </Link> */}
             <a href="#about" onClick={() => setIsOpen(false)}>
               About
             </a>
@@ -82,7 +37,7 @@ function Navbar() {
             </a>
           </li>
           <li className={styles.navItem}>
-            <a href="#resume" onClick={() => setIsOpen(false)}>
+            <a href={Resume} download target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </li>

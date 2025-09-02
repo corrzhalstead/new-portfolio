@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 import { Link } from "react-router-dom";
 import aboutMe from "../../assets/aboutMe_image.png";
 import Button from "../Button/Button";
-import Resume from "../../assets/Corazon_Halstead_Resume.pdf";
+import Resume from "../../assets/Corazon_Halstead_Resume_Portfolio.pdf";
 
 function Card({ header, description, isButtonVisible, buttonText, onClick }) {
   return (
