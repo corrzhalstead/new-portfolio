@@ -27,24 +27,24 @@ function Navbar() {
         {/* Navigation links */}
         <ul className={`${styles.navList} ${isOpen ? styles.open : ""}`}>
           <li className={styles.navItem}>
-            <a href="#about" onClick={() => setIsOpen(false)}>
+            <Link to="/#about" onClick={() => setIsOpen(false)}>
               About
-            </a>
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="#projects" onClick={() => setIsOpen(false)}>
+            <Link to="/#projects" onClick={() => setIsOpen(false)}>
               Projects
-            </a>
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href={Resume} download target="_blank" rel="noopener noreferrer">
+            <Link to="/#resume" onClick={() => setIsOpen(false)}>
               Resume
-            </a>
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="#contact" onClick={() => setIsOpen(false)}>
+            <Link to="/#contact" onClick={() => setIsOpen(false)}>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
