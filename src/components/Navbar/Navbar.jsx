@@ -8,43 +8,6 @@ function Navbar() {
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
-  // return (
-  //   <div className={styles.container}>
-  //     <button className={styles.menuToggle} onClick={toggleMenu}>
-  //       ☰
-  //     </button>
-  //     <div className={styles.navbar}>
-  //       <ul className={`${styles.navList} ${isOpen ? styles.open : ""}`}>
-  //         <li className={styles.navItem}>
-  //           <Link to="/" onClick={() => setIsOpen(false)}>
-  //             Home
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/about" onClick={() => setIsOpen(false)}>
-  //             About
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/projects" onClick={() => setIsOpen(false)}>
-  //             Projects
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/resume" onClick={() => setIsOpen(false)}>
-  //             Resume
-  //           </Link>
-  //         </li>
-  //         <li className={styles.navItem}>
-  //           <Link to="/contact" onClick={() => setIsOpen(false)}>
-  //             Contact
-  //           </Link>{" "}
-  //         </li>
-  //       </ul>
-  //     </div>
-  //   </div>
-  // );
-
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
@@ -63,33 +26,25 @@ function Navbar() {
 
         {/* Navigation links */}
         <ul className={`${styles.navList} ${isOpen ? styles.open : ""}`}>
-          {/* <li className={styles.navItem}>
-            <Link to="/" onClick={() => setIsOpen(false)}>
-              Home
+          <li className={styles.navItem}>
+            <Link to="/#about" onClick={() => setIsOpen(false)}>
+              About
             </Link>
-          </li> */}
-          <li className={styles.navItem}>
-            {/* <Link to="/about" onClick={() => setIsOpen(false)}>
-              About
-            </Link> */}
-            <a href="#about" onClick={() => setIsOpen(false)}>
-              About
-            </a>
           </li>
           <li className={styles.navItem}>
-            <a href="#projects" onClick={() => setIsOpen(false)}>
+            <Link to="/#projects" onClick={() => setIsOpen(false)}>
               Projects
-            </a>
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="#resume" onClick={() => setIsOpen(false)}>
+            <Link to="/#resume" onClick={() => setIsOpen(false)}>
               Resume
-            </a>
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a href="#contact" onClick={() => setIsOpen(false)}>
+            <Link to="/#contact" onClick={() => setIsOpen(false)}>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
