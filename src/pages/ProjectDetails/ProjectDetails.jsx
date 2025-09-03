@@ -14,9 +14,22 @@ function ProjectDetails() {
   const projectFromState = state?.project;
   const project = projectFromState ?? projects.find((p) => p.key === key);
 
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate("/", { replace: true });
+    }
+  };
+
   return (
     <div className={styles.container}>
-      <div className={styles.topContainer} onClick={() => navigate(-1)}>
+      <div
+        className={styles.topContainer}
+        onClick={handleBack}
+        role="button"
+        tabIndex={0}
+      >
         <img src={arrowLeft} alt="Back Arrow" />
         <p>Back</p>
       </div>
