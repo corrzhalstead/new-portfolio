@@ -1,12 +1,10 @@
 .container {
+  position: relative;
   width: 100%;
   /* max-width: 1200px; */
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* background-color: linear-gradient(#ffff, #2e5aad); */
-  /* background-color: black; */
+  flex-direction: column;
 }
 
 .container::before {
@@ -19,6 +17,7 @@
   background-size: cover;
   opacity: 0.3;
   z-index: -1;
+  min-height: 90vh;
 }
 
 .topContainer {
@@ -49,6 +48,7 @@
 
 .contentLeft {
   min-width: 600px;
+  max-width: 100%;
   flex: 1;
   margin-right: 2rem;
 }
@@ -96,3 +96,21 @@
 /* .projectSubContainer p {
   font-size: 15px;
 } */
+
+@media (max-width: 1254px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contentLeft {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+}

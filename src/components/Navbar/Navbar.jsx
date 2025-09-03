@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import profilePic from "../../assets/ProfilePic.jpg";
+import Resume from "../../assets/Corazon_Halstead_Resume_Portfolio.pdf";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,6 @@ function Navbar() {
           </a>
         </div>
 
-        {/* Hamburger toggle for mobile */}
         <button className={styles.menuToggle} onClick={toggleMenu}>
           ☰
         </button>

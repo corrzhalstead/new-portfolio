@@ -59,7 +59,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" exact element={<MainPage />} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/projects/:key" element={<ProjectDetails />} />
       </Routes>
     </Router>
@@ -67,29 +67,3 @@ function App() {
 }
 
 export default App;
-
-// <Router>
-//   <Navbar />
-//   <Routes>
-//     <Route path="/" element={<Home />} />
-//     <Route path="/about" element={<About />} />
-//     <Route path="/projects" element={<Projects />} />
-//     <Route path="/contact" element={<Contact />} />
-//   </Routes>
-// </Router>
-{
-  /* <main>
-        <section id="home">
-          <Home />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-      </main> */
-}
