@@ -37,9 +37,13 @@ function Navbar() {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link to="/#resume" onClick={() => setIsOpen(false)}>
+            {/* <Link to="/#resume" onClick={() => setIsOpen(false)}>
               Resume
-            </Link>
+            </Link> */}
+
+            <a href={Resume} download target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
           </li>
           <li className={styles.navItem}>
             <Link to="/#contact" onClick={() => setIsOpen(false)}>
